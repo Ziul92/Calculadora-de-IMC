@@ -1,0 +1,85 @@
+@mixin flex($espaço) {
+    display: flex;
+    justify-content: $espaço;
+    align-items: center;
+}
+  
+@mixin texto($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+
+main{
+    @include flex(center);  
+    width: 100vw;
+    height: 100vh;
+}
+
+.calculadora {
+    @include flex(space-evenly);
+    flex-direction: column;
+    background-color: #1E90FF;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #BC8F8F;
+
+    &__titulo {
+        @include flex(center);
+        @include texto(30px,1000,15px);
+        width: 100%;
+        font-family: serif;
+        border-bottom: solid 5px black;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        @include flex(space-between);
+        width: 300px;
+        height: 50px;
+        margin: 5px 20px;
+
+        &--titulo {
+            @include texto(25px,700,10px);
+            font-family: serif;
+        }
+
+        &--input {
+            width: 200px;
+            height: 30px;
+            @include texto(20px,1000,0);
+            font-family: serif;
+            border-radius: 5px;
+            border: none;
+            
+        }
+    }
+
+    &__botao {
+        @include texto(20px,1000,1px);
+        background-color: black;
+        color: #FFA500;
+        border-radius: 5px;
+        width: 300px;
+        height: 40px;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+
+    &__resultado {
+        @include texto(20px,0,25px);
+        width: 300px;
+        height: 150px;
+        border-radius: 5px;
+        font-style: italic;
+        font-family: serif;
+        background: black;
+        color: #FF7F50;
+        padding: 20px;
+        box-sizing: border-box;
+        user-select: none;
+        margin-bottom: 15px;
+    }
+
+}

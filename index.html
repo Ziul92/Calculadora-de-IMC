@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Bagulho</title>
+    <title>Calculadora IMC</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="title"> Calculadora - IMC </div>
-        <div class="input">
-            <label>Nome:</label>
-            <input type="text" id='nome' placeholder="Digite o seu nome!">
-        </div>
-        <div class="input">
-            <label>Peso:</label>
-            <input type="text" id='peso' placeholder="Digite o seu peso!">
-        </div>
-        <div class="input">
-            <label>Altura:</label>
-            <input type="text" id='altura' placeholder="Digite a sua altura!">
-        </div>
-        <button id='calcular'>Calcular</button>
+      <section class="calculadora">
+        <h1 class="calculadora__titulo"> Calculadora - IMC </h1>
+        <form class="calculadora__form">
+            <label class="calculadora__form--titulo">Nome:</label>
+            <input class="calculadora__form--input" type="text" id='nome' placeholder="Digite o seu nome!">
+        </form>
+        <form class="calculadora__form">
+            <label class="calculadora__form--titulo">Peso:</label>
+            <input class="calculadora__form--input" type="text" id='peso' placeholder="Digite o seu peso!">
+        </form>
+        <form class="calculadora__form">
+            <label class="calculadora__form--titulo">Altura:</label>
+            <input class="calculadora__form--input" type="text" id='altura' placeholder="Digite a sua altura!">
+        </form>
+        <button class="calculadora__botao" id='calcular'>Calcular</button>
 
-        <div class="result" id='resultado'></div>
-      </div>
+        <p class="calculadora__resultado" id='resultado'></p>
+      </section>
     </main>
-    <script src="./imc.js"></script>
+    
   </body>
-  
   <script type="text/javascript" src="js/index.js"></script>
 </html>
