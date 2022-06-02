@@ -1,8 +1,8 @@
 const calcular = document.querySelector("#calcular");
+const nome = document.querySelector("#nome");
 
 
 function imc(){
-  const nome = document.querySelector("#nome");
   const peso = document.querySelector("#peso").value;
   const altura = document.querySelector("#altura").value;
   const resultado = document.querySelector("#resultado");
